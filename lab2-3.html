@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML From Exercise</title>
+        <meta charset="utf-8">
+        <style>
+            table,tr,td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>เข้าสู่ระบบ</h1>
+        <form action="lab2-3-login.html">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <input 
+                            type="text" 
+                            name="username" 
+                            autofocus required
+                        >
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>password:</td>
+                    <td>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            required
+                        >
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        กรุณาพิมพ์ด้วยตามตัวเลขที่ปรากฏ:
+                        <br>
+                        1559
+                        <br>
+                    <input
+                        pattern="1559"
+                        type="text" 
+                        name="verify"  
+                        required
+                        title="กรุณากรอกให้ถูกต้อง"
+                    >
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input 
+                type="image" 
+                width="50" 
+                height="50" 
+                src="https://cdn-icons-png.flaticon.com/512/3408/3408455.png" 
+                alt="login"
+            >
+        </form>
+    </body>
+</html>

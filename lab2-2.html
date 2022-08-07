@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab2-2</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="form-echo.php" method="get">
+            <h3>แบบฟอร์มจองทัวร์</h3>
+            <fieldset>
+                <legend>ข้อมูลทั่วไป</legend>
+                ชื่อ-สกุล :<br>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="กรอกชื่อ-สกุล"
+                    required
+                >*
+                <br>
+                Email :<br>
+                <input
+                    type="text"
+                    name="email"
+                    required
+                >*
+                <br>
+                โทรศัพท์ :<br>
+                <input
+                    type="tel"
+                    name="telephone"
+                    value="+66"
+                    required
+                >*
+                <br>
+                ที่อยู่ :<br>
+                <textarea name="address"></textarea>
+                <br>
+                รหัสไปรษณีย์ :
+                <input
+                    type="text"
+                    name="postcode"
+                    pattern="\d{5}"
+                    style="width: 55px; height: 15px;"
+                >
+                รูปผู้จอง :
+                <input 
+                    type="file" 
+                    name="image" 
+                    accept="image/*"
+                >
+              </fieldset>
+            
+            <fieldset>
+                <legend>ข้อมูลเข้าสู่ระบบ</legend>
+                Username : <br>
+                <input 
+                    type="text"
+                    name="username"
+                    pattern="\w{8,}"
+                    title="Username should only contain lowercase letters."
+                >
+                <br><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i><br>
+                Password : <br>
+                <input
+                    type="text"
+                    name="password"
+                    pattern=".{8}"
+                    title="Username should only contain lowercase letters."
+                >
+                <br><i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+                แพคเก็จทัวร์ :
+                <select name="country">
+                    <option value="">--select--</option>
+                    <option value="America">America</option>
+                    <option value="Brunai">Brunai</option>
+                    <option value="China">China</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="England">England</option>
+                </select>
+                <br>
+                วันที่เดินทาง :
+                <input 
+                    type="date" 
+                    name="date"
+                >
+                <br>
+                จำนวนผู้เดินทาง :
+                <input
+                    type="text"
+                    name="tourist"
+                    min="1" max="10"
+                    title="The tourists must be 1 to 10 people only."
+                    style="width: 55px; height: 15px;"
+                >
+
+                <br>
+                เน้นการท่องเที่ยวแบบใด?
+                <br>
+
+                <input 
+                    type="checkbox" 
+                    name="travel" 
+                    value="shopping"
+                >
+                ช็อปปิ้ง
+
+                <br>
+                <input 
+                    type="checkbox" 
+                    name="travel"
+                    value="naural"
+                >ธรรมชาติ
+                
+                <br>
+                <input 
+                    type="checkbox" 
+                    name="travel" 
+                    value="sea"
+                >ทะเล
+            </fieldset>
+            ยอมรับเงื่อนไขและข้อตกลง
+            <input 
+                type="radio" 
+                name="codition" 
+                value="agree" 
+                checked="checked"
+            > 
+            I agree
+
+            <input 
+                type="radio" 
+                name="codition" 
+                value="disagree"
+            > 
+            I disagree
+            <input type="submit" value="จอง">
+        </form>
+
+    </body>
+</html>
